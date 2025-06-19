@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--Icon for the tab -->
+        <link rel="icon" type="Images/png" href="Images/IconPortfolio.png">
+        
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Instrument+Serif&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+        <!--Link to css file-->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
+        <title>Ishaan Kadam</title>
+        
+    </head>
+    <body>
+        <!-- Header with initials and menu button -->
+        <div class="header">
+            <div class="initials">I-K</div>
+            <button class="menu-button" id="menuButton"></button>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <div class="navigation-menu" id="navigationMenu">
+            <a href="#home">Home</a>
+            <a href="#recent-projects">Recent Projects</a>
+            <a href="#previous-experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#references">References</a>
+            <a href="#contact">Contact Me</a>
+        </div>
+        
+        <section id="home" class="heading-container">
+            <h1>ISHAAN KADAM</h1>
+            <h3 class="name-description">
+                Ishaan Kadam is a passionate engineering student driven by innovation, <br>combining electronics, programming and design to create smart, efficient systems <br> that solve real-world problems and push boundaries in technology.<br><br>
+            </h3>
+        </section>
+        
+        <!--THIS SECTION SHOULD BE ON THE LEFT SIDE-->
+        <div class="about-me">
+        <h3>
+            <strong>About Me</strong>
+        </h3>
+        <p>
+            Rooted in engineering and driven by creativity, Ishaan Kadam is a multidisciplinary prospective engineer with a designer's eye - crafting smart systems that combine technical precision with intuitive user experience.<br><br>
+        </p>
+        <!-- ADD THIS AS A BUTTON -->
+        <a href="PDFs/IshaanKadam_CV_%20Bath_ElecEng.pdf" target="_blank">
+            <button class="download-cv">Download CV</button>
+        </a>
+        </div>
+        
+        <!-- THIS SECTION SHOULD BE ON THE RIGHT SIDE-->
+        <div class="technical-skills" onclick="openModal('skillsModal')">
+            <h3>Technical Skills</h3>
+            <div class="technical-skills-icons">
+                <div class="python-icon icon"> 
+                    <img src="Images/Icons/pythonLogo.png" alt="python icon"/>
+                </div>
+            
+                <div class="css-icon icon"> 
+                    <img src="Images/Icons/cssLogo.png" alt="css icon" />
+                </div>
+                
+                <div class="html-icon icon"> 
+                    <img src="Images/Icons/htmlLogo.png" alt="html icon" />
+                </div>
+                
+                <div class="arduino-icon icon"> 
+                    <img src="Images/Icons/ArduinoLogo.png" alt="arduino icon" />
+                </div>
+                
+                <div class="autodesk-icon icon">
+                    <img src="Images/Icons/AutodeskInventorLogo.png" alt="autodesk inventor icon" />
+                </div>
+
+                <div class="kicad-icon icon">
+                    <img src="Images/Icons/KiCAD%20logo.png" alt="kicad icon" />
+                </div>
+                
+                <div class="ltspice-icon icon">
+                    <img src="Images/Icons/LTSpiceLogo.png" alt="ltspice icon" />
+                </div>
+
+                <div class="ansys-icon icon">
+                    <img src="Images/Icons/AnsysLogo.png" alt="ansys logo" />
+                </div>
+
+                <div class="matlab-simulink-icon icon">
+                    <img src="Images/Icons/MatlabSimulinkk%20Logo.png" alt="matlab icon" />
+                </div>
+
+                <div class="quartus-prime-icon icon">
+                    <img src="Images/Icons/Quartus%20Prime%20Logo.png" alt="quartus prime icon" />
+                </div>
+                
+                <div class="figma-icon icon">
+                    <img src="Images/Icons/Figma%20Logo.png" alt="figma icon"/>
+                </div>
+            </div>
+        </div>
+        <!-- Skills Modal -->
+        <div id="skillsModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal('skillsModal')">&times;</span>
+                    <div class="modal-title">Technical Skills</div>
+                    <div class="modal-subtitle">Overview of all proficiencies</div>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Programming:</strong> Python, HTML, CSS, MATLAB, Arduino – experienced in GUI development, machine learning, and object-oriented programming.</p>
+                    <p><strong>CAD (Autodesk Inventor):</strong> Skilled in 3D modeling, simulation, FEA, and manufacturing-ready design.</p>
+                    <p><strong>PCB Design (KiCad, OrCAD):</strong> Competent in schematic capture, PCB layout, simulation, and multi-layer board fabrication.</p>
+                    <p><strong>LtSpice:</strong>Experienced in simulating analog and mixed-signal circuits, transient and frequency analysis, and verifying circuit behavior before prototyping</p>
+                    <p><strong>Ansys:</strong>Competent in CFD and FEA simulations, including thermal, structural, and fluid flow analysis using tools like Fluent and Mechanical.</p>
+                    <p><strong>MATLAB & Simulink:</strong> Strong command in system modeling, control systems, signal processing, and data analysis.</p>
+                    <p><strong>FPGA Design (Quartus Prime):</strong> Knowledgeable in VHDL/Verilog, synthesis, timing analysis, and embedded system development.</p>
+                    <p><strong>UI/UX Design (Figma):</strong> Proficient in wireframing, prototyping, and collaborative design workflows.</p>
+                    
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">MATLAB</span>
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">Autodesk Inventor</span>
+                        <span class="tech-tag">KiCad</span>
+                        <span class="tech-tag">OrCAD</span>
+                        <span class="tech-tag">LtSpice</span>
+                        <span class="tech-tag">Ansys</span>
+                        <span class="tech-tag">Simulink</span>
+                        <span class="tech-tag">VHDL</span>
+                        <span class="tech-tag">Verilog</span>
+                        <span class="tech-tag">Figma</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-button" onclick="closeModal('skillsModal')">Close</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!--This Section will be floating in the middle-->
+        <!-- EACH PROJECT SHOULD HAVE ITS OWN PICTURE AND DESCRIPTION--> 
+        <section id="recent-projects" class="recent-projects">
+            <h3>Recent Projects</h3>
+            
+            <div class="projects-grid">
+                
+            <!-- Dog Breed Identification Project -->
+                <div class="project-tile" onclick="openModal('dogBreedModal')">
+                    <div class="project-image">
+                        <div class="project-year">2025</div> <!-- Dont think i need again -->
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">Dog Breed Identification Machine Learning Project</div>
+                    </div>
+                </div>
+                
+            <!-- Smart Thermostat Project -->
+                <div class="project-tile" onclick="openModal('smartThermostatModal')">
+                    <div class="project-image">
+                        <div class="project-year">2024</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">Arduino Based Smart Thermostat</div>
+                    </div>
+                </div>
+                
+                <!-- Self Navigating Car Project -->
+                <div class="project-tile" onclick="openModal('carRaceModal')">
+                    <div class="project-image">
+                        <div class="project-year">2024</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">Self Navigating Car</div>
+                    </div>
+                </div>
+                
+                <!-- Beatrix Project -->
+                <div class="project-tile" onclick="openModal('beatrixModal')">
+                    <div class="project-image">
+                        <div class="project-year">2023</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">Programming Beatrix</div>
+                    </div>
+                </div>
+                
+                <!-- Dual Wavelength Pulse Oximeter Project-->
+                <div class="project-tile" onclick="openModal('oximeterModal')">
+                    <div class="project-image">
+                        <div class="project-year">2023</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">Dual Wavelength Pulse Oximeter</div>
+                    </div>
+                </div>
+            <!-- ADD MORE PROJECTS HERE -->
+            </div> 
+        </section>
+        
+        <!-- Pop up window for Dog Breed project -->
+        <div id="dogBreedModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal('dogBreedModal')">&times;</span>
+                    <div class="modal-title">Dog Breed Identification Machine Learning Project</div>
+                    <div class="modal-subtitle">Computer Vision - Deep Learning</div> <!-- Re-evaluate if needed -->
+                </div>
+                <div class="modal-body">
+                    <p>This project was a self-initiated exploration aimed at deepening my understanding of machine learning, particularly in the domain of computer vision. I developed a convolutional neural network (CNN) model capable of classifying dog breeds based on input images.</p>
+                    
+                    <p>The goal was to accurately predict the breed of a dog from a given photograph. To achieve this, I utilized a comprehensive dataset from Kaggle containing over 20,000 labeled images spanning a wide variety of dog breeds.</p>
+                
+                    <p>The workflow involved preprocessing the image data, building and training the model using TensorFlow and Keras, and visualizing the training process and results with tools such as pandas, numpy and matplotlib.</p>
+                
+                    <p>The project not only reinforced my understanding of neural networks and image classification but also gave me practical experience in handling large datasets, optimizing model performance, and evaluating classification metrics.</p>
+                
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Keras</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="close-button" onclick="closeModal('dogBreedModal')">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pop up window for Smart Thermostat Project -->
+        <div id="smartThermostatModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal('smartThermostatModal')">&times;</span>
+                    <div class="modal-title">Arduino Based Smart Thermostat</div>
+                    <div class="modal-subtitle">NOT SURE IF NEEDED</div>
+                </div>
+                <div class="modal-body">
+                    <p>This was a group project that I led, focused on the end-to-end design and development of a smart thermostat. The primary objective was to apply and strengthen our skills in PCB design, embedded systems, and CAD for product development.</p>
+
+                    <p>We began by conducting market research to analyze existing smart thermostats and identify key features and design trends among competitors. Based on our findings, we collaboratively developed an initial concept and system architecture.</p>
+
+                    <p>This included component selection, footprint creation in OrCAD and KiCad, and schematic design. During the PCB layout stage, we carefully considered thermal management, signal integrity, and compliance with industry manufacturing guidelines.</p>
+
+                    <p>In parallel, we designed a custom casing for the thermostat using CAD tools to simulate the final product assembly and ensure mechanical compatibility.</p>
+
+                    <p>Leading this project significantly enhanced my leadership and project management skills, as well as my ability to collaborate effectively within a multidisciplinary team.</p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">PCB Design</span>
+                        <span class="tech-tag">OrCAD</span>
+                        <span class="tech-tag">KiCad</span>
+                        <span class="tech-tag">Embedded Systems</span>
+                        <span class="tech-tag">CAD</span>
+                        <span class="tech-tag">Thermal Management</span>
+                        <span class="tech-tag">Signal Integrity</span>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="close-button" onclick="closeModal('smartThermostatModal')">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pop up window for Self Navigating Car Project-->
+        <div id="carRaceModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal('carRaceModal')">&times;</span>
+                    <div class="modal-title">Self Navigating Car</div>
+                    <div class="modal-subtitle">NOT SURE IF NEEDED</div> <!-- Re-evaluate if needed -->
+                </div>
+                <div class="modal-body">
+                    <p>This was another group project that I led, focused on designing and building a battery-powered autonomous car capable of completing a track loop in the shortest possible time. The car navigated by detecting a magnetic field generated by a wire embedded beneath the track, using inductors as sensors.</p>
+
+                    <p>To achieve this, we developed a complete signal processing and control system, including a band-pass filter, peak detection circuit, motor control unit, and battery management system.</p>
+
+                    <p>The peak detection circuit extracted directional cues from the magnetic signal and fed this information to an Arduino, which adjusted the car's steering using PWM signals to control each of the motors.</p>
+
+                    <p>Leading this project strengthened my skills in analog circuit design, embedded systems, and sensor integration. It also enhanced my ability to manage a multidisciplinary team and coordinate efforts across hardware and software development.</p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">Analog Circuit Design</span>
+                        <span class="tech-tag">Signal Processing</span>
+                        <span class="tech-tag">PWM Control</span>
+                        <span class="tech-tag">Embedded Systems</span>
+                        <span class="tech-tag">Sensor Integration</span>
+                        <span class="tech-tag">Motor Control</span>
+                        <span class="tech-tag">Battery Management</span>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="close-button" onclick="closeModal('carRaceModal')">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pop up window for Beatrix Project-->
+        <div id="beatrixModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal('beatrixModal')">&times;</span>
+                    <div class="modal-title">Programming Beatrix</div>
+                    <div class="modal-subtitle">NOT SURE IF NEEDED</div> <!-- Re-evaluate if needed -->
+                </div>
+                <div class="modal-body">
+                    <p>This was a group project in which we developed a MATLAB-based graphical user interface (GUI) to control various functions of a robotic system. The interface allowed users to manage head movement, switch between onboard cameras, and respond to sounds near it.</p>
+
+                    <p>To extend the functionality, we integrated facial recognition capabilities using the robot's camera feed. This allowed the system to detect and recognize faces in real time, enhancing its interactivity and autonomy.</p>
+
+                    <p>Participating in this project strengthened my skills in MATLAB, especially in GUI development, real-time image processing, and understanding the fundamentals of facial recognition techniques.</p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">MATLAB</span>
+                        <span class="tech-tag">GUI Development</span>
+                        <span class="tech-tag">Facial Recognition</span>
+                        <span class="tech-tag">Real-time Processing</span>
+                        <span class="tech-tag">Image Processing</span>
+                        <span class="tech-tag">Robotics</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="close-button" onclick="closeModal('beatrixModal')">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <!-- Pop up window for Pulse Oximeter Project-->
+        <div id="oximeterModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal('oximeterModal')">&times;</span>
+                    <div class="modal-title">Dual Wavelength Pulse Oximeter</div>
+                    <div class="modal-subtitle">NOT SURE IF NEEDED</div> <!-- Re-evaluate if needed -->
+                </div>
+                <div class="modal-body">
+                    <p>This project involved designing and building a dual-wavelength pulse oximeter from the ground up. I assembled the electronic circuitry by soldering various components onto a custom PCB using multiple soldering techniques.</p>
+
+                    <p>The circuit was then connected to an Arduino microcontroller. The device used photodiodes to detect light absorption at two wavelengths, allowing it to measure both heart rate and blood oxygen saturation (SpO₂).</p>
+
+                    <p>Real-time heart rate data was visualized using the Arduino IDE's serial plotter. The oximeter was tested extensively across multiple users to ensure accuracy and reliability.</p>
+
+                    <p>This project significantly enhanced my skills in circuit assembly, sensor integration, embedded programming, and physiological signal processing.</p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">PCB Assembly</span>
+                        <span class="tech-tag">Soldering</span>
+                        <span class="tech-tag">Photodiodes</span>
+                        <span class="tech-tag">Signal Processing</span>
+                        <span class="tech-tag">Embedded Programming</span>
+                        <span class="tech-tag">Sensor Integration</span>
+                        <span class="tech-tag">Biomedical Engineering</span>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="close-button" onclick="closeModal('oximeterModal')">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+            
+        
+        <!-- Work Experience -->
+        <!-- Title will be floating on the left and actual experience will be listed in their own sections to the right of the title. -->
+        <section id="previous-experience">
+            <div class="previous-experience-title">
+                <h3>
+                    Previous Experience
+                </h3>
+            </div>
+            <div class="previous-experience">
+                <div class="separator">
+                    <h4>Team Bath Drones</h4>
+                    <h5>
+                        <span>Avionics Engineer</span>
+                        <span class="date">Sep 2024 - Present</span>
+                    </h5>
+                    <p>
+                        As a member of Team Bath Drones, I am contributing to the design, development, and testing of drones for the IMechE UAS competition. My role involves assisting with drone assembly, optimizing performance to meet competition standards, and collaborating closely with teammates to address technical challenges. This experience has enhanced my skills in systems engineering, testing methodologies, problem solving and teamwork under tight deadlines. <br><br>
+                    </p>
+                </div>
+                <div class="separator">
+                    <h4>Team Bath Drones</h4>
+                    <h5>
+                        <span>Sponsorship Coordinator</span>
+                        <span class="date">Sep 2024 - Present</span>
+                    </h5>
+                    <p>
+                        I successfully secured key sponsorships from industry leaders such as Ansys and RS Components, ensuring critical funding for this year’s competition. To achieve this, I designed a detailed sponsorship booklet that effectively communicated the team’s goals and vision, addressing potential ambiguities to align with sponsor’s expectations. My attention to detail in crafting clear, compelling messaging strengthen industry partnerships and secured essential financial support. <br><br>
+                    </p>
+                </div>
+                <div class="separator">
+                    <h4>Cloudville Ltd</h4>
+                    <h5>
+                        <span>Summer Intern</span>
+                        <span class="date">June 2023 – Sep 2023</span>
+                    </h5>
+                    <p>
+                        I worked in the IT department at Cloudville Ltd over the summer, successfully delivering a major IT project on time and within budget. I played a key role in testing and ensuring all website components functioned correctly, requiring problem solving and critical thinking to identify and resolve issues efficiently. This experience also strengthened my time management and communication skills through daily task completion.<br><br>
+                    </p>
+                </div>
+                <div class="separator">
+                    <h4>Knowle Green Kickboxing Club</h4>
+                    <h5>
+                        <span>Assistant Kickboxing Trainer</span>
+                        <span class="date">July 2021 - Sep 2023</span>
+                    </h5>
+                    <p>
+                        I worked as an assistant kickboxing trainer after achieving my black belt where I coached children aged 4-8, ensuring they practiced various techniques safely. This role developed my communication and critical thinking skills, as I had to effectively explain techniques to the children and communicate progress and improvements to their parents. <br><br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="separator-image">
+            <img src="Images/Website_Images/ProgrammingBackground.jpg" alt="Programming Image">
+        </div>
+        
+        
+        <section class="motivation-section">
+        <!-- Motivation -->
+        <!-- Section should be same as the previous section, where the title is on the left, and the actual text is on the right-->
+        <div class="motivation-title">
+        <h3>
+            Motivation
+        </h3>
+        </div>
+        <div class="motivation">
+        <p>
+            More than just a field of study, Computer Systems Engineering is an outlet for innovation. It’s where hardware meets software, and abstract ideas become real-world solutions. Whether you're building embedded systems, designing PCBs, or optimizing code on a microcontroller, you’re turning complexity into functionality.<br><br>
+            You have the power to bridge the physical and digital—creating systems that control autonomous vehicles, power medical devices, or make homes smarter. Each project is a new challenge: one day you’re soldering components onto a PCB, the next you’re debugging firmware or simulating system behavior.<br><br>
+            As a computer systems engineer, you don’t just work with machines—you bring them to life. The field constantly evolves, pushing you to learn, adapt, and create. And nothing beats the feeling of seeing something you built—something that once lived only in a schematic—working in the real world.
+            <br><br>
+        </p>
+        </div>
+        </section>
+        
+        
+        <div class="separator-image">
+            <img src="Images/Website_Images/LaptopBackground.png" alt="Programming Image">
+        </div>
+        
+        <!-- Education History -->
+        <!-- Section same as previous one-->
+        <section id="education">
+            <div class="education-history-title">
+            <h3>
+                Education History
+            </h3>
+            </div>
+            <div class="education-history">
+                <div class="separator">
+                    <h4>University of Bath</h4>
+                    <h5>
+                        <span>BEng (Hons) Computer Systems Engineering</span>
+                        <span class="date">Sep 2023 - July 2026</span>
+                    </h5>
+                    <p>
+                        First Year Average: 74% (With 83% achieved in Engineering Design and Practice Module)<br>
+                        Second Year Average: __% (With 90% achieved in Engineering Practice and Design Module)<br><br>
+                    </p>
+                </div>
+                <div class="separator">
+                <h4>Zero To Mastery Academy</h4>
+                <h5>
+                    <span>Complete AI & Machine Learning, Data Science Bootcamp, Machine Learning and AI</span>
+                    <span class="date">Jan 2025 - March 2025</span>
+                </h5>
+                <p>
+                    ADD LITTLE DESCRIPTION??
+                </p>
+                </div>
+                <div class="separator">
+                <h4>Salesian's Sixth Form College</h4>
+                <h5>
+                    <span>A levels</span>
+                    <span class="date">Sep 2021 - July 2021</span>
+                    </h5>
+                <p>
+                    Maths, Computer Science, Physics, EPQ - (A, A, B, A)<br><br>
+                </p>
+                </div>
+                <div class="separator">
+                <h4>The Matthew Arnold School</h4>
+                <h5>
+                    <span>GCSEs</span>
+                    <span class="date">Sep 2016 - July 2021</span>        
+                </h5>
+                <p>
+                    10 GCSE’s (8-6) including Maths, English, Physics, Chemistry and Computer Science<br><br>
+                </p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="achievements">
+        <!-- Interests/Achievements-->
+        <div class="interests-title">
+            <h3>Interests & Achievements</h3>
+        </div>
+        <div class="interests-description">
+            <div class="separator">
+                <h4>Kickboxing Back Belt 1st Dan</h4>
+                <p>
+                    I have practiced kickboxing for approximately eight years, training up to five times a week. Throughout this time, I progressed through multiple gradings and successfully earned my black belt.<br><br>
+                </p>
+            </div>
+            
+            <div class="separator">
+                <h4>Various Cricket Teams</h4>
+                <p>
+                    I have been actively involved in playing cricket for several years, both recreationally and in competitive settings. Through regular training and match experience, I’ve developed strong teamwork, strategic thinking, and leadership skills on and off the field.<br><br>
+                </p>
+            </div>
+        </div>
+        </section>
+        
+        <!-- References-->
+        <section id="references">
+        <div class="references-title">
+            <h3>References</h3>
+        </div>
+            
+        <div class="carousel-wrapper">
+            <div class="references-carousel">
+                <div class="reference-track">
+                    <div class="reference-card">
+                        <h4>Aditya Seghal</h4>
+                        <h5>Director, Cloudville Ltd</h5>
+                        <p>
+                            Ishaan interned with us on a project for the health startup MindSight and proved to be a valuable member of the team. He was proactive, eager to learn, and consistently showed initiative. His contributions to both development and testing played a key role in helping us meet critical milestones. Ishaan’s enthusiasm and dedication made a strong impression, and I’m confident he has a bright future ahead.
+                            
+                        </p>
+                    </div>
+                    <div class="reference-card">
+                        <h4>NAME</h4>
+                        <h5>Position and Company Name</h5>
+                        <p>
+                            Multos fabulas excepteur. Te quae incididunt graviterque aut illum transferrem  vidisse quis eiusmod ex officia labore labore possumus veniam eu sed an domesticarum. Eram se fabulas e dolor ad mentitum quorum legam deserunt ipsum. Consequat ex fugiat laboris, quo ut labore litteris ad anim laborum reprehenderit, magna et appellat.<br><br>
+                        </p>
+                    </div>
+                    <div class="reference-card">
+                        <h4>NAME</h4>
+                        <h5>Position and Company Name</h5>
+                        <p>
+                            Multos fabulas excepteur. Te quae incididunt graviterque aut illum transferrem  vidisse quis eiusmod ex officia labore labore possumus veniam eu sed an domesticarum. Eram se fabulas e dolor ad mentitum quorum legam deserunt ipsum. Consequat ex fugiat laboris, quo ut labore litteris ad anim laborum reprehenderit, magna et appellat.<br><br>
+                        </p>
+                    </div>
+                    <div class="reference-card">
+                        <h4>NAME</h4>
+                        <h5>Position and Company Name</h5>
+                        <p>
+                            Multos fabulas excepteur. Te quae incididunt graviterque aut illum transferrem  vidisse quis eiusmod ex officia labore labore possumus veniam eu sed an domesticarum. Eram se fabulas e dolor ad mentitum quorum legam deserunt ipsum. Consequat ex fugiat laboris, quo ut labore litteris ad anim laborum reprehenderit, magna et appellat.<br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+        
+        <div class="footer-container">
+            <!-- Contact Options-->
+            <section id="contact">
+                <div class="footer-info">
+                    <div class="name-tag">
+                        <h4>Ishaan Kadam</h4>
+                    </div>
+                    <div class="scroll-to-top">
+                        <a href="#home">Go Back To Top</a>
+                    </div>
+                </div>
+                <div class="contact-me">
+                    <h3>Contact Me </h3>
+                    <!-- Buttons for social media -->
+                    <div class="social-media-tags">
+                        <a href="https://www.linkedin.com/in/ishaan-kadam-149014239/" target="_blank">LinkedIn</a>
+                        <a href="">IshaanKadam4@gmail.com</a>
+                        <a href="">+44 7459578139</a>
+                    </div>
+                </div>
+                
+                
+            </section>
+        </div>
+    <script src="script.js"></script>
+    </body>
+</html>
