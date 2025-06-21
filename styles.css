@@ -993,7 +993,7 @@ h1{
         font-size: 26px;
     }
 }
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .header{
         padding: 10px 15px;
     }
@@ -1109,5 +1109,184 @@ h1{
     }
     .contact-me{
         text-align: right;
+    }
+}
+*/
+
+@media (max-width: 480px) {
+    .about-skills-container{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .name-description{
+        font-size: 14px;
+        max-width: 100%;
+    }
+    .about-me p{
+        font-size: 15px;
+    }
+    .about-me{
+        width: 100%;
+        order: 1;
+    }
+    .technical-skills{
+        width: 100%;
+        order: 2;
+    }
+    .download-cv{
+        margin-left: 0;
+        display: block;
+        margin-top: 10px;
+    }
+    .projects-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .modal-content{
+        width: 95%;
+        margin: 10% auto;
+    }
+    .recent-projects h3{
+        font-size: 2rem;
+    }
+    .kicad-icon img{
+        width: 60px;
+        height: 60px;
+    }
+    .header{
+        padding: 15px 20px;
+    }
+    .initials{
+        font-size: 28px;
+    }
+    .menu-button{
+        width: 45px;
+        height: 45px;
+    }
+    .navigation-menu{
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    h1{
+        font-size: 36px;
+    }
+    .name_description{
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    .about-me h3,
+    .technical-skills h3,
+    .section-title h3{
+        font-size: 24px;
+    }
+    .about-me p{
+        font-size: 16px;
+    }
+    .recent-projects h3{
+        font-size: 32px;
+    }
+    .projects-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .modal-content{
+        width: 95%;
+        margin: 10% auto;
+    }
+    .modal-header,
+    .modal-body{
+        padding: 20px;
+    }
+    .modal-title{
+        font-size: 1.5rem;
+    }
+    .section-content h4{
+        font-size: 20px;
+    }
+    .section-content h5{
+        font-size: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .date{
+        font-size: 14px;
+    }
+    .reference-card{
+        flex: 0 0 300px;
+        min-height: 180px;
+        padding: 15px;
+    }
+    .reference-card h4{
+        font-size: 18px;
+    }
+    .reference-card h5{
+        font-size: 14px;
+    }
+    .reference-card p{
+        font-size: 13px;
+    }
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .separator-image img{
+        height: 200px;
+    }
+    .footer-container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        padding: 2px;
+        gap: 10px;
+    }
+    #contact{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+    .footer-info,
+    .contact-me{
+        flex: 1;
+    }
+    .contact-me{
+        text-align: right;
+    }
+    .contact-me h3{
+        font-size: 24px;
+    }
+    .previous-experience-title {
+        width: 35%;
+    }
+    .previous-experience{
+        width: 75%
+    }
+    .motivation-title{
+        width: 35%;
+    }
+    .motivation{
+        width: 65%;
+    }
+    .education-history-title{
+        width: 35%;
+    }
+    .education-history{
+        width: 65%;
+    }
+    .interests-title{
+        width: 35%;
+    }
+    .interests-description{
+        width: 65%;
+    }
+    .interests-title h3{
+        font-size: 26px;
     }
 }
