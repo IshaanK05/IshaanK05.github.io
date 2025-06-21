@@ -109,7 +109,7 @@
 
 h1{
     font-family: "Gravitas One";
-    font-size: 50px;
+    font-size: 6vw;
     color: #333;
 }
 .heading-container{
@@ -121,11 +121,14 @@ h1{
     flex-direction: column;
 }
 .name-description{
-    font-family: "Playfair Display";
-    font-size: 17px;
+    font-size: 1.7vw;
+    max-width: 90%;
     margin-top:48px;
-    max-width: 600px;
     line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .name-description{
     display: flex;
@@ -135,9 +138,20 @@ h1{
 }
 
 
+
+.about-skills-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    gap: 20px;
+}
+.about-me, .technical-skills{
+    width: 100%;
+    padding: 15px;
+}
 .about-me{
     width: 60%;
-    float: left;
     padding: 15px;
     padding-bottom: 50px;
 }
@@ -165,7 +179,6 @@ h1{
 
 .technical-skills{
     width: 40%;
-    float: right;
     color: #444;
     padding: 15px;
     padding-right: 25px;
@@ -486,21 +499,6 @@ h1{
     font-size: 0.8rem;
     font-weight: 500;
 }
-@media (max-width: 768px){
-    .projects-grid{
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .modal-content{
-        width: 95%;
-        margin: 10% auto;
-    }
-    
-    .recent-projects h3{
-        font-size: 2rem;
-    }
-}
 
 #previous-experience{
     display: flex;
@@ -682,9 +680,10 @@ h1{
     transition: transform 0.3s;
     border: solid rgb(203, 203, 203);
 }
-.reference-card:hover {
+/* .reference-card:hover {
   transform: translateY(-5px);
 }
+*/
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
@@ -784,4 +783,331 @@ h1{
     object-fit: cover;
     border-radius: 50px;
     padding: 30px;
+}
+
+
+/* To make the website responsive: */
+@media (max-width: 1024px) {
+    .section-container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .section-title{
+        position: static;
+        flex: none;
+    }
+    .about-skills-container{
+        flex-direction: column;
+    }
+    .technical-skills-icons{
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    .about-skills-container{
+        flex-wrap: nowrap;
+    }
+    .about-me{
+        width: 58%;
+    }
+    .technical-skills{
+        width: 40%;
+    }
+}
+@media (max-width: 768px) {
+    .about-skills-container{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .about-me p{
+        font-size: 15px;
+    }
+    .about-me{
+        width: 100%;
+        order: 1;
+    }
+    .technical-skills{
+        width: 100%;
+        order: 2;
+    }
+    .name-description{
+        font-size: 14px;
+        max-width: 100%;
+    }
+    .download-cv{
+        margin-left: 0;
+        display: block;
+        margin-top: 10px;
+    }
+    .projects-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .modal-content{
+        width: 95%;
+        margin: 10% auto;
+    }
+    .recent-projects h3{
+        font-size: 2rem;
+    }
+    .kicad-icon img{
+        width: 60px;
+        height: 60px;
+    }
+    .header{
+        padding: 15px 20px;
+    }
+    .initials{
+        font-size: 28px;
+    }
+    .menu-button{
+        width: 45px;
+        height: 45px;
+    }
+    .navigation-menu{
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    h1{
+        font-size: 36px;
+    }
+    .name_description{
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    .about-me h3,
+    .technical-skills h3,
+    .section-title h3{
+        font-size: 24px;
+    }
+    .about-me p{
+        font-size: 16px;
+    }
+    .recent-projects h3{
+        font-size: 32px;
+    }
+    .projects-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .modal-content{
+        width: 95%;
+        margin: 10% auto;
+    }
+    .modal-header,
+    .modal-body{
+        padding: 20px;
+    }
+    .modal-title{
+        font-size: 1.5rem;
+    }
+    .section-content h4{
+        font-size: 20px;
+    }
+    .section-content h5{
+        font-size: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .date{
+        font-size: 14px;
+    }
+    .reference-card{
+        flex: 0 0 300px;
+        min-height: 180px;
+        padding: 15px;
+    }
+    .reference-card h4{
+        font-size: 18px;
+    }
+    .reference-card h5{
+        font-size: 14px;
+    }
+    .reference-card p{
+        font-size: 13px;
+    }
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .separator-image img{
+        height: 200px;
+    }
+    .footer-container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        padding: 2px;
+        gap: 10px;
+    }
+    #contact{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+    .footer-info,
+    .contact-me{
+        flex: 1;
+    }
+    .contact-me{
+        text-align: right;
+    }
+    .contact-me h3{
+        font-size: 24px;
+    }
+    .previous-experience-title {
+        width: 35%;
+    }
+    .previous-experience{
+        width: 75%
+    }
+    .motivation-title{
+        width: 35%;
+    }
+    .motivation{
+        width: 65%;
+    }
+    .education-history-title{
+        width: 35%;
+    }
+    .education-history{
+        width: 65%;
+    }
+    .interests-title{
+        width: 35%;
+    }
+    .interests-description{
+        width: 65%;
+    }
+    .interests-title h3{
+        font-size: 26px;
+    }
+}
+@media (max-width: 480px) {
+    .header{
+        padding: 10px 15px;
+    }
+    .initials{
+        font-size: 24px;
+    }
+    .menu-button{
+        width: 40px;
+        height: 40px;
+    }
+    .navigation-menu{
+        right: 15px;
+        top: 60px;
+        min-width: 180px;
+    }
+    h1{
+        font-size: 28px;
+    }
+    .name-description{
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .heading-container{
+        padding: 15px;
+    }
+    .about-skills-container{
+        padding: 20px 15px;
+        gap: 20px;
+    }
+    .about-me,
+    .technical-skills{
+        padding: 15px;
+    }
+    .technical-skills-icons{
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+        gap: 8px;
+    }
+    .technical-skills-icons img{
+        width: 35px;
+        height: 35px;
+    }
+    .kicad-icon img{
+        width: 40px;
+        height: 40px;
+    }
+    .recent-projects{
+        padding: 20px 15px;
+    }
+    .project-image{
+        height: 140px;
+    }
+    .recent-projects h3{
+        font-size: 28px;
+    }
+    .previous-experience-title {
+        width: 35%;
+    }
+    .previous-experience{
+        width: 65%;
+    }
+    .motivation-title{
+        width: 35%;
+    }
+    .motivation{
+        width: 65%;
+    }
+    .education-history-title{
+        width: 35%;
+    }
+    .education-history{
+        width: 65%;
+    }
+    .interests-title{
+        width: 35%;
+    }
+    .interests-description{
+        width: 65%;
+    }
+    .interests-title h3{
+        font-size: 25px;
+    }
+    .reference-card{
+        flex: 0 0 250px;
+        min-height: 160px;
+        padding: 12px;
+    }
+    .references-title{
+        font-size: 24px;
+    }
+    .separator-image{
+        margin: 20px 0;
+        padding: 0 15px;
+    }
+    .separator-image img{
+        height: 150px;
+    }
+    .footer-container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 15px;
+        gap: 5px;
+    }
+    #contact{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .footer-info,
+    .contact-me{
+        flex: 1;
+    }
+    .contact-me{
+        text-align: right;
+    }
 }
