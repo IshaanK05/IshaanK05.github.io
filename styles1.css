@@ -1017,6 +1017,9 @@ h1{
         min-height: 180px;
         padding: 15px;
     }
+    .references-carousel{
+        animation: scroll-left 50s linear infinite;
+    }
     .reference-card h4{
         font-size: 18px;
     }
@@ -1095,6 +1098,9 @@ h1{
     }
     .modal-content{
         width: 100%;
+    }
+    .references-carousel{
+        animation: scroll-left 55s linear infinite;
     }
     
 }
