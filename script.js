@@ -60,3 +60,13 @@ window.addEventListener('DOMContentLoaded', () => {
       track.appendChild(clone);
     });
   });
+
+// Scroll-triggered header collapse
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+        header.classList.add('collapsed');
+    } else {
+        header.classList.remove('collapsed');
+    }
+});
