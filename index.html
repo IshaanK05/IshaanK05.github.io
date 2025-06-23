@@ -21,19 +21,24 @@
     <body>
         <!-- Header with initials and menu button -->
         <div class="header">
+            <div class="header-inner">
             <div class="initials">I-K</div>
             <button class="menu-button" id="menuButton"></button>
+            </div>
+            </div>
+        <!-- Navigation menu -->
+        <div class="navigation-overlay" id="navigationMenu">
+                    <div class="nav-links">
+                        <button class="close-overlay-btn" onclick="document.getElementById('navigationMenu').classList.remove('active')">&times;</button>
+                        <a href="#home">Home</a>
+                        <a href="#recent-projects">Recent Projects</a>
+                        <a href="#previous-experience">Experience</a>
+                        <a href="#education">Education</a>
+                        <a href="#references">References</a>
+                        <a href="#contact">Contact Me</a>
+                    </div>                    
         </div>
         
-        <!-- Navigation Menu -->
-        <div class="navigation-menu" id="navigationMenu">
-            <a href="#home">Home</a>
-            <a href="#recent-projects">Recent Projects</a>
-            <a href="#previous-experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#references">References</a>
-            <a href="#contact">Contact Me</a>
-        </div>
         
         <section id="home" class="heading-container">
             <h1>ISHAAN KADAM</h1>

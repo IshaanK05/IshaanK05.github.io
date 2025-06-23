@@ -25,22 +25,30 @@
 }
 
 
-
-
 .header{
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    max-width: 1200px;
     z-index: 1000;
-    padding: 20px 30px;
+    padding: 10px 30px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(202, 235, 255, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+.header-inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    background-color: #caebff;
-    border-radius: 15px;
+    padding: 14px 30px;
+    transition: all 0.8s ease;
+    transform: scale(1);
+    width: 100%;
 }
 .initials{
     font-family: "Gravitas One";
@@ -72,17 +80,22 @@
     color: white;
     font-size: 20px;
 }
+.menu-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 .navigation-menu{
-    position: fixed;
-    top: 80px;
-    right: 30px;
+    position: absolute;
+    top: 60px;
+    right: 0;
     background: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     padding: 20px 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
     transition: all 0.3s ease;
     z-index: 999;
 }
@@ -90,6 +103,7 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    background-color: #caebff;
 }
 .navigation-menu a{
     font-family: "Playfair Display";
@@ -105,6 +119,60 @@
 .navigation-menu a:hover{
     background-color: #f8f9fa;
     border-left-color: #007bff;
+    color: #007bff;
+}
+.navigation-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #caebff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all 0.6s ease-in-out;
+}
+.navigation-overlay.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.close-overlay-btn{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    padding-right: 50px;
+    font-size: 5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 10001;
+}
+.close-overlay-btn:hover{
+    transform: scale(1.2);
+    color: #007bff;
+}
+.nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+.nav-links a{
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover{
     color: #007bff;
 }
 
@@ -506,6 +574,7 @@ h1{
 /* Default mobile styles - stacked layout */
 #previous-experience{
     display: block;
+    padding: 20px 0 20px 15px;
 }
 .previous-experience-title{
     width: 100%;
@@ -555,7 +624,7 @@ h1{
 
 .motivation-section{
     display: block;
-    padding-top: 30px;
+    padding: 30px 0 20px 15px;
 }
 .motivation-title{
     width: 100%;
@@ -575,6 +644,7 @@ h1{
 
 #education{
     display: block;
+    padding: 20px 0 20px 15px;
 }
 .education-history-title{
     width: 100%;
@@ -610,6 +680,7 @@ h1{
 
 #achievements{
     display: block;
+    padding: 20px 0 20px 15px;
 }
 .interests-title{
     width: 100%;
@@ -1110,17 +1181,24 @@ h1{
     justify-content: center;
     width: 25%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.85);
+    background-color: rgba(202,235,255,0.6);
     padding: 10px 20px;
     border-radius: 15px;
-    background-color: #caebff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.5s ease;
+    /* backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s ease background-color 0.8s ease; */
+}
+.header.collapsed .header-inner{
+    justify-content: center;
+    gap: 20px;
+    padding: 8px 20px;
+    transform: scale(0.85);
 }
 .header.collapsed .initials{
-    font-size: 24px;
+    font-size: 30px;
     transition: font-size 0.3s ease;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 .header.collapsed .menu-button{
     transform: scale(0.9);

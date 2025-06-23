@@ -1,4 +1,5 @@
 // Get the menu button and navigation menu elements
+/*
 const menuButton = document.getElementById('menuButton');
 const navigationMenu = document.getElementById('navigationMenu');
 
@@ -14,6 +15,22 @@ document.addEventListener('click', function(event) {
         navigationMenu.classList.remove('active');
     }
 });
+*/
+
+const menuButton = document.getElementById('menuButton');
+const overlayMenu = document.getElementById('navigationMenu');
+
+menuButton.addEventListener('click', () => {
+    overlayMenu.classList.toggle('active');
+});
+
+// Optional: Close menu when Escape is pressed
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        overlayMenu.classList.remove('active');
+    }
+});
+
 
 // Optional: Close menu when pressing Escape key
 document.addEventListener('keydown', function(event) {
