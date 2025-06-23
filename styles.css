@@ -1108,7 +1108,7 @@ h1{
 }
 .header.collapsed{
     justify-content: center;
-    width: 15%;
+    width: 25%;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
