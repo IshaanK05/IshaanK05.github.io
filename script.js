@@ -87,3 +87,43 @@ window.addEventListener('scroll', function() {
         header.classList.remove('collapsed');
     }
 });
+
+// Add this to your existing JavaScript file or create a new one
+
+// Intersection Observer for scroll-triggered animations
+function initScrollAnimations() {
+    // Configuration for the observer
+    const observerOptions = {
+        threshold: 0.3, // Trigger when 30% of element is visible
+        rootMargin: '0px 0px -50px 0px' // Start animation 50px before element enters viewport
+    };
+
+    // Create the observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add visible class to trigger animation
+                entry.target.classList.add('visible');
+                
+                // Optional: Stop observing this element once animated
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Select all elements with the animate-title class
+    const animatedTitles = document.querySelectorAll('.animate-title');
+    
+    // Start observing each title
+    animatedTitles.forEach(title => {
+        observer.observe(title);
+    });
+}
+
+// Initialize animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', initScrollAnimations);
+
+// Optional: Re-initialize if content is dynamically added
+function reinitScrollAnimations() {
+    initScrollAnimations();
+}
