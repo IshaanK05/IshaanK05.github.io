@@ -3,7 +3,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Playfair Display";
+    font-family: "Playfair Display";    
 }
 
 .gravitas-one-regular{
@@ -26,6 +26,8 @@
 
 body{
     background-color: #fff7ef;
+    overflow-x: hidden;
+    max-width: 100%
 }
 
 .header{
@@ -182,8 +184,11 @@ body{
 
 h1{
     font-family: "Gravitas One";
-    font-size: 6vw;
+    padding-top: 100px;
+    font-size: 8vw;
     color: #333;
+    line-height: 1.1;
+    text-align: center;
 }
 .heading-container{
     display: flex;
@@ -192,6 +197,82 @@ h1{
     text-align: center;
     height: 100vh;
     flex-direction: column;
+}
+.subheading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.location, .role{
+    font-size: 18px;
+    flex: 0 0 auto;
+    min-width: fit-content;
+    font-weight: 900;
+    padding-top: 100px;
+    text-align: center;
+    white-space: nowrap;
+    max-width: calc(50% - 15px);
+    overflow: hidden;
+}
+@media (max-width: 600px){
+    .subheading-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 20px 40px;
+    }
+    .location, .role{
+        max-width: 100%;
+        padding-top: 30px;
+        text-align: center;
+        overflow: visible;
+    }
+    .location{
+        order: 1;
+    }
+    .role{
+        order: 2;
+    }
+}
+@media (min-width: 601px) and (max-width: 1024px){
+    .subheading-container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 40px 40px;
+        flex-wrap: wrap; 
+    }
+    .location, .role{
+        font-size: 19px;
+        max-width: none;
+        text-align: center;
+        padding-top: 0;
+        white-space: nowrap;
+    }
+}
+@media (min-width: 1025px){
+    .subheading-container{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 300px;
+        padding: 0 80px 60px;
+        flex-wrap: nowrap;
+    }
+    .location{
+        text-align: left;
+        font-size: 20px;
+        max-width: none;
+    }
+    .role{
+        text-align: right;
+        font-size: 20px;
+        max-width: none;
+    }
 }
 .name-description{
     font-size: 1.7vw;
@@ -1217,7 +1298,7 @@ h1{
 .animate-title{
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .animate-title.visible{
     opacity: 1;

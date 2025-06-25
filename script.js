@@ -88,7 +88,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Add this to your existing JavaScript file or create a new one
 
 // Intersection Observer for scroll-triggered animations
 function initScrollAnimations() {
@@ -104,9 +103,6 @@ function initScrollAnimations() {
             if (entry.isIntersecting) {
                 // Add visible class to trigger animation
                 entry.target.classList.add('visible');
-                
-                // Optional: Stop observing this element once animated
-                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
