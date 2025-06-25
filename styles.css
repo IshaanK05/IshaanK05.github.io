@@ -25,7 +25,7 @@
 }
 
 body{
-    background-color: #fff7ef;
+    background-color: #F7FFFA;
     overflow-x: hidden;
     max-width: 100%
 }
@@ -893,6 +893,8 @@ h1{
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
+    padding-bottom: 10px;
+    padding-top: 0;
 }
 .social-media-tags a:hover {
     color: #222; 
