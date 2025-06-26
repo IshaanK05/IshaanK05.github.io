@@ -43,7 +43,7 @@ body{
     background-color: rgba(202, 235, 255, 0.95);
     border-radius: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.8s ease;
+    transition: all 0.8s ease, width 0.8s ease, background-color 0.8s ease;
     overflow: hidden;
 }
 .header-inner{
@@ -1221,6 +1221,22 @@ h1{
     .contact-me h3{
         font-size: 26px;
     }
+    .header-collapsed{
+        width: 240px;
+    }
+    .header.collapsed .header-inner{
+        gap: 10px;
+        padding: 3px 10px;
+    }
+    .header.collapsed .initials{
+        font-size: 20px;
+        margin-right: 8px;
+    }
+    .header.collapsed .menu-button{
+        width: 35px;
+        height: 35px;
+        transform: scale(0.75);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1268,33 +1284,49 @@ h1{
     .previous-experience-title h3, .motivation-title h3, .education-history-title h3, .interests-title h3{
         font-size: 22px;
     }
-    
+    .header.collapsed{
+        width: 250px;
+    }
+    .header.collapsed .initials{
+        font-size: 18px;
+        margin-right: 6px;
+    }
+    .header.collapsed .menu-button{
+        width: 32px;
+        height: 32px;
+    }
 }
 .header.collapsed{
     justify-content: center;
-    width: 35%;
+    width: 280px;
     left: 50%;
     transform: translateX(-50%) scale(0.85);
     background-color: rgba(202,235,255,0.6);
-    padding: 10px 20px;
+    padding: 8px 20px;
     border-radius: 15px;
-    /* backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.8s ease background-color 0.8s ease; */
+    white-space: nowrap;
 }
 .header.collapsed .header-inner{
     justify-content: center;
-    gap: 20px;
-    padding: 8px 20px;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 15px;
     transform: scale(0.85);
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
 }
 .header.collapsed .initials{
-    font-size: 30px;
+    font-size: 24px;
     transition: font-size 0.3s ease;
-    margin-right: 15px;
+    margin-right: 10px;
+    flex-shrink: 0;
 }
 .header.collapsed .menu-button{
-    transform: scale(0.9);
+    transform: scale(0.8);
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
 }
 
 .animate-title{
