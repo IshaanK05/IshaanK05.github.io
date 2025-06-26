@@ -1222,20 +1222,31 @@ h1{
         font-size: 26px;
     }
     .header-collapsed{
-        width: 240px;
+        width: calc(100% - 20px);
+        transform: translateX(-50%);
+        background-color: rgba(202,235,255,0.6);
+        padding: 15px 20px;
+        border-radius: 25px;
     }
     .header.collapsed .header-inner{
-        gap: 10px;
-        padding: 3px 10px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0; 
+        padding: 14px 30px; 
+        transform: scale(1); 
+        display: flex;
+        flex-wrap: nowrap;
     }
     .header.collapsed .initials{
-        font-size: 20px;
-        margin-right: 8px;
+        font-size: 24px;
+        margin-right: 0;
+        flex-shrink: 0;
     }
     .header.collapsed .menu-button{
-        width: 35px;
-        height: 35px;
-        transform: scale(0.75);
+        transform: scale(1);
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
     }
 }
 
@@ -1285,15 +1296,25 @@ h1{
         font-size: 22px;
     }
     .header.collapsed{
-        width: 250px;
+        width: calc(100% - 20px);
+        transform: translateX(-50%);
+        background-color: rgba(202,235,255,0.6);
+        padding: 15px 20px;
+    }
+    header.collapsed .header-inner{
+        justify-content: space-between;
+        padding: 14px 30px;
+        transform: scale(1);
+        gap: 0;
     }
     .header.collapsed .initials{
-        font-size: 18px;
-        margin-right: 6px;
+        font-size: 20px;
+        margin-right: 0;
     }
     .header.collapsed .menu-button{
-        width: 32px;
-        height: 32px;
+        width: 45px;
+        height: 45px;
+        transform: scale(1);
     }
 }
 .header.collapsed{
