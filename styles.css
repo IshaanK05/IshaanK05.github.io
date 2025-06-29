@@ -353,25 +353,35 @@ h1{
     transform: scale(1.03);
 }
 
-
+.technical-skills h3{
+    font-family: "Playfair Display";
+    font-size: 36px;
+}
 .technical-skills{
     width: 40%;
     padding: 15px;
     padding-right: 25px;
     padding-bottom: 10px;
-}
-.technical-skills h3{
-    font-family: "Playfair Display";
-    font-size: 36px;
-}
-.technical-skills:hover {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
+    border-radius: 15px;
+    animation: floatShadow 4s ease-in-out infinite;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: none;
+    position: relative;
     cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0,1);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+
+}
+.technical-skills:hover{
+    transform: translateY(-8px) rotate(-5deg) rotateY(-3deg);
+    cursor: pointer;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
-
 .technical-skills-icons{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -385,9 +395,6 @@ h1{
     object-fit: contain;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-.technical-skills-icons:hover{
-    transform: scale(1.1)
 }
 .python-icon img{
     width: 45px;
@@ -500,11 +507,13 @@ h1{
     border: 2px solid;
     padding: 1px;
     overflow: hidden;
-    transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0,1);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .project-tile:hover{
-    transform: translateY(-5px);
+    transform: translateY(-8px) rotate(5deg) rotateY(-3deg);
     cursor: pointer;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
