@@ -324,7 +324,7 @@ h1{
     right: 30px;
     top: 50%;
     transform: translateY(-50%);
-    width: 15px;
+    width: 1.5px;
     height: 80%;
     background-color: rgba(202, 235, 255, 0.85);
     z-index: 1;
