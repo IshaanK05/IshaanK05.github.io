@@ -1,21 +1,3 @@
-// Get the menu button and navigation menu elements
-/*
-const menuButton = document.getElementById('menuButton');
-const navigationMenu = document.getElementById('navigationMenu');
-
-// Add click event listener to the menu button
-menuButton.addEventListener('click', function() {
-    // Toggle the 'active' class on the navigation menu
-    navigationMenu.classList.toggle('active');
-});
-
-// Optional: Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    if (!menuButton.contains(event.target) && !navigationMenu.contains(event.target)) {
-        navigationMenu.classList.remove('active');
-    }
-});
-*/
 
 const menuButton = document.getElementById('menuButton');
 const overlayMenu = document.getElementById('navigationMenu');
@@ -24,20 +6,21 @@ menuButton.addEventListener('click', () => {
     overlayMenu.classList.toggle('active');
 });
 
-// Optional: Close menu when Escape is pressed
-document.addEventListener('keydown', function (event) {
+// ✅ Close the menu when a nav link is clicked
+const navLinks = overlayMenu.querySelectorAll('.nav-links a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        overlayMenu.classList.remove('active');
+    });
+});
+
+//  Close menu with Escape key
+document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         overlayMenu.classList.remove('active');
     }
 });
 
-
-// Optional: Close menu when pressing Escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        navigationMenu.classList.remove('active');
-    }
-});
 function openModal(modalId) {
     document.getElementById(modalId).style.display = 'block';
     document.body.style.overflow = 'hidden';
