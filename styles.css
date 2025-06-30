@@ -335,20 +335,23 @@ h1{
     }
 }
 
-.download-cv{
+a.download-cv{
+    display: inline-block;
     cursor: pointer;
     background-color: rgba(202, 235, 255, 0.85);
     border-radius: 18px;
     border: 2px solid rgba(202, 235, 255, 0.85);
-    padding: 10px 25px 10px 25px;
+    padding: 10px 25px;
     margin-left: 220px;
     font-size: 18px;
     font-weight: 400;
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
+    text-decoration: none !important;
+    color: black;
 }
-.download-cv::before{
+a.download-cv::before{
     content: '';
     position: absolute;
     top: 0;
@@ -357,18 +360,20 @@ h1{
     height: 100%;
     background-color: rgba(202, 235, 255, 0.85); 
     border-radius: 16px; 
-    z-index: -1; 
+    z-index: 0; 
     transition: transform 0.4s ease; 
     transform: translateY(0);
+    pointer-events: none;
 }
-.download-cv:hover::before{
+a.download-cv:hover::before{
     transform: translateY(-100%);
 }
-.download-cv:hover{
+a.download-cv:hover{
     background-color: transparent;
     border: 2px solid rgba(202, 235, 255, 0.85);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     transform: scale(1.03);
+    text-decoration: none !important;
 }
 
 .technical-skills h3{
@@ -856,6 +861,11 @@ h1{
     display: flex;
     width: max-content;
     animation: scroll-left 40s linear infinite;
+    user-select: none;
+    -webkit-user-drag: none;
+    -ktml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 .reference-track{
     display: flex;
@@ -866,12 +876,13 @@ h1{
     min-height: 150px;
     max-height: 300px;
     overflow-y: auto;
-    background-color: #fdfdfd;
+    background-color: #fef4ff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 20px;
     transition: transform 0.3s;
     border: solid rgb(203, 203, 203);
+    user-select: none;
 }
 
 @keyframes scroll-left {
@@ -891,16 +902,19 @@ h1{
 }
 .reference-card p{
     text-align: left;
+    user-select: none;
 }
 .reference-card h4{
     font-size: 20px;
     padding: 5px;
     text-align: left;
+    user-select: none;
 }
 .reference-card h5{
     font-size: 18px;
     padding: 2px;
     text-align: left;
+    user-select: none;
 }
 
 
@@ -961,7 +975,27 @@ h1{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
+.scroll-to-top a, .social-media-tags a {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.scroll-to-top a::after, .social-media-tags a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(202, 235, 255, 0.85); 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.social-media-tags a:hover::after,
+.scroll-to-top a:hover::after {
+    transform: scaleX(1);
+}
 
 .separator-image{
     width: 100%;
@@ -1148,10 +1182,11 @@ h1{
         font-size: 14px;
         max-width: 100%;
     }
-    .download-cv{
+    a.download-cv{
         margin-left: 0;
-        display: block;
+        display: inline-block;
         margin-top: 10px;
+        text-decoration: none !important;
     }
     .projects-grid{
         grid-template-columns: 1fr;
@@ -1334,10 +1369,11 @@ h1{
         width: 100%;
         order: 2;
     }
-    .download-cv{
+    a.download-cv{
         margin-left: 0;
-        display: block;
+        display: inline-block;
         margin-top: 10px;
+        text-decoration: none !important;
     }
     .projects-grid{
         grid-template-columns: 1fr;

@@ -1,4 +1,3 @@
-
 const menuButton = document.getElementById('menuButton');
 const overlayMenu = document.getElementById('navigationMenu');
 
@@ -6,7 +5,7 @@ menuButton.addEventListener('click', () => {
     overlayMenu.classList.toggle('active');
 });
 
-// ✅ Close the menu when a nav link is clicked
+//  Close the menu when a nav link is clicked
 const navLinks = overlayMenu.querySelectorAll('.nav-links a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -52,14 +51,108 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+// Enhanced References carousel functionality with drag support
 window.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.reference-track');
+    const carousel = document.querySelector('.references-carousel');
+    
+    if (!track || !carousel) return;
+    
+    // Clone cards for infinite loop
     const cards = Array.from(track.children);
     cards.forEach(card => {
-      const clone = card.cloneNode(true);
-      track.appendChild(clone);
+        const clone = card.cloneNode(true);
+        track.appendChild(clone);
     });
-  });
+    
+    // Draggable carousel variables
+    let isDragging = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let animationPaused = false;
+    
+    // Function to pause/resume animation
+    function pauseAnimation() {
+        carousel.style.animationPlayState = 'paused';
+        animationPaused = true;
+    }
+    
+    function resumeAnimation() {
+        carousel.style.animationPlayState = 'running';
+        animationPaused = false;
+    }
+    
+    // Mouse events
+    carousel.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        carousel.style.cursor = 'grabbing';
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+        pauseAnimation();
+        
+        // Prevent text selection while dragging
+        e.preventDefault();
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+        if (isDragging) {
+            isDragging = false;
+            carousel.style.cursor = 'grab';
+            resumeAnimation();
+        }
+    });
+    
+    carousel.addEventListener('mouseup', () => {
+        if (isDragging) {
+            isDragging = false;
+            carousel.style.cursor = 'grab';
+            resumeAnimation();
+        }
+    });
+    
+    carousel.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2; // Multiply by 2 for faster scrolling
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+    
+    // Touch events for mobile
+    carousel.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+        pauseAnimation();
+    });
+    
+    carousel.addEventListener('touchend', () => {
+        isDragging = false;
+        resumeAnimation();
+    });
+    
+    carousel.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        
+        const x = e.touches[0].pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        carousel.scrollLeft = scrollLeft - walk;
+        
+        // Prevent page scrolling while dragging
+        e.preventDefault();
+    });
+    
+    // Set initial cursor style
+    carousel.style.cursor = 'grab';
+    
+    // Optional: Reset scroll position when animation completes a cycle
+    carousel.addEventListener('animationiteration', () => {
+        if (!isDragging && !animationPaused) {
+            carousel.scrollLeft = 0;
+        }
+    });
+});
 
 // Scroll-triggered header collapse
 window.addEventListener('scroll', function() {
@@ -70,7 +163,6 @@ window.addEventListener('scroll', function() {
         header.classList.remove('collapsed');
     }
 });
-
 
 // Intersection Observer for scroll-triggered animations
 function initScrollAnimations() {
