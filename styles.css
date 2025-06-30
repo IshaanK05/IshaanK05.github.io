@@ -502,6 +502,7 @@ h1{
     display: block;
     font-size: 36px;
     text-align: center;
+    justify-content: center;
     margin-bottom: 50px;
     letter-spacing: 1px;
     font-family: "Playfair Display";
@@ -514,13 +515,19 @@ h1{
 }
 .project-title{
     font-weight: 600;
-    margin-bottom: 8px;
+    font-size: 17px;
+    margin-bottom: 4px;
+    line-height: 1.2;
     vertical-align: center;
+    color: #333;
+    letter-spacing: -0.5px;
+    
 }
 .project-tile{
     background: white;
-    border-radius: 12px;
+    border-radius: 13px;
     border: 2px solid;
+    border-color: #00314e;
     padding: 1px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0,1);
@@ -563,20 +570,9 @@ h1{
     z-index: 2;
 }
 .project-content{
-    padding: 20px;
+    padding: 12px 20px;
 }
-.project-title{
-    font-size: 17px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
-}
-.project-type{
-    font-size: 15px;
-    color: #666;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-}
+
 .project-year{
     position: absolute;
     top: 15px;
@@ -637,7 +633,7 @@ h1{
 }
 .modal-title{
     color: black;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -704,6 +700,7 @@ h1{
 #previous-experience{
     display: block;
     padding: 20px 0 20px 15px;
+    position: relative;
 }
 .previous-experience-title{
     width: 100%;
@@ -744,8 +741,8 @@ h1{
 }
 .separator{
     padding: 10px;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-    width: 95%
+    border-bottom: 1.5px solid rgb(202,225,255, 0.85);
+    width: 95%;
 }
 .separator:last-child{
     border-bottom: none;
