@@ -181,10 +181,9 @@ body{
     color: #007bff;
 }
 
-
 h1{
     font-family: "Gravitas One";
-    padding-top: 100px;
+    padding-top: 170px;
     font-size: 8vw;
     color: #333;
     line-height: 1.1;
@@ -338,6 +337,7 @@ h1{
 a.download-cv{
     display: inline-block;
     cursor: pointer;
+    color: black;
     background-color: rgba(202, 235, 255, 0.85);
     border-radius: 18px;
     border: 2px solid rgba(202, 235, 255, 0.85);
@@ -349,7 +349,7 @@ a.download-cv{
     overflow: hidden;
     transition: all 0.4s ease;
     text-decoration: none !important;
-    color: black;
+    z-index: 1;
 }
 a.download-cv::before{
     content: '';
@@ -360,7 +360,7 @@ a.download-cv::before{
     height: 100%;
     background-color: rgba(202, 235, 255, 0.85); 
     border-radius: 16px; 
-    z-index: 0; 
+    z-index: -1; 
     transition: transform 0.4s ease; 
     transform: translateY(0);
     pointer-events: none;
@@ -736,6 +736,7 @@ a.download-cv:hover{
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px;
+    text-decoration: underline;
 }
 .date{
     padding-right: 50px;
