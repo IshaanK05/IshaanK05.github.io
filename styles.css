@@ -6,6 +6,26 @@
     font-family: "Playfair Display";    
 }
 
+
+h1{
+    font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+h3.animate-title, .previous-experience-title h3, .education-history-title h3, .interests-title h3, .references-title h3 {font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+
+.modal-subtitle {
+    font-size: 1rem;
+    margin-top: -5px;
+}
+
+p, .modal-body p {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.6;
+}
+
+
 .gravitas-one-regular{
   font-family: "Gravitas One", serif;
   font-weight: 400;
@@ -620,7 +640,7 @@ a.download-cv:hover{
     backdrop-filter: blur(5px);
 }
 .modal-content{
-    background-color: white;
+    background: linear-gradient(135deg, #f9fcff, #f0f7ff);
     margin: 5% auto;
     padding: 0;
     border-radius: 15px;
@@ -636,20 +656,30 @@ a.download-cv:hover{
     padding: 30px;
     border-radius: 15px 15px 0 0;
 }
+.modal-header .close{
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.modal-header .close:hover{
+    transform: rotate(90deg) scale(1.2);
+    color: #007bff;
+    opacity: 1;
+}
 .modal-title{
     color: black;
     font-size: 1.4rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .modal-subtitle{
     font-size: 1rem;
     opacity: 0.9;
-    text-transform: uppercase;
     letter-spacing: 1px;
     color: black;
+    margin-bottom: 0;
 }
 .modal-body{
+    padding-top: 0;
+    margin-top: 0;
     padding: 30px;
     line-height: 1.6;
     color: #444;
@@ -730,7 +760,8 @@ a.download-cv:hover{
     padding-bottom: 10px;
 }
 .previous-experience h5{ /* Position Names */
-    font-size: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #333;
     display: flex;
     justify-content: space-between;
@@ -801,7 +832,8 @@ a.download-cv:hover{
     padding-top: 5px;
 }
 .education-history h5{
-    font-size: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #333;
     display: flex;
     justify-content: space-between;
@@ -838,7 +870,8 @@ a.download-cv:hover{
     padding-top: 5px;
 }
 .interests-description h5{
-    font-size: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #333;
     display: flex;
     justify-content: space-between;
@@ -877,7 +910,7 @@ a.download-cv:hover{
     min-height: 150px;
     max-height: 300px;
     overflow-y: auto;
-    background-color: #fef4ff;
+    background-color: #f4fbff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 20px;
@@ -930,6 +963,7 @@ a.download-cv:hover{
     padding-top: 35px;
     height: 35vh;
     display: flex;
+    margin-bottom: 50px;;
 }
 .footer-info{
     display: flex;
@@ -1144,6 +1178,12 @@ a.download-cv:hover{
         height: 450px;
         object-fit: cover;
         object-position: center;
+    }
+    .about-me::after {
+        display: none;
+    }
+    .about-me, .technical-skills {
+        text-align: center;
     }
 }
 
