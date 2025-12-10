@@ -69,7 +69,7 @@
                 Rooted in engineering and driven by creativity, Ishaan Kadam is a multidisciplinary prospective engineer with a designer's eye - crafting smart systems that combine technical precision with intuitive user experience.<br><br>
             </p>
             <!-- ADD THIS AS A BUTTON -->
-            <a href="PDFs/IshaanKadam_CV_%20Bath_ElecEng.pdf" class="download-cv" target="_blank">Download CV</a>
+            <a href="PDFs/Ishaan_Kadam_CV.pdf" class="download-cv" target="_blank">Download CV</a>
             </div>
 
             <!-- THIS SECTION SHOULD BE ON THE RIGHT SIDE-->
@@ -119,6 +119,10 @@
                     <div class="figma-icon icon">
                         <img src="Images/Icons/Figma%20Logo.png" alt="figma icon"/>
                     </div>
+                    <div class="figma-icon icon">
+                        <img src="Images/Icons/AWRLogo.png" alt="AWR icon"/>
+                    </div>
+                         
                 </div>
             </div>
             <!-- Skills Modal -->
@@ -131,11 +135,12 @@
                     </div>
                     <div class="modal-body">
                         <p><strong>Programming:</strong> Python, HTML, CSS, MATLAB, Arduino – experienced in GUI development, machine learning, and object-oriented programming.</p>
-                        <p><strong>CAD (Autodesk Inventor):</strong> Skilled in 3D modeling, simulation, FEA, and manufacturing-ready design.</p>
+                        <p><strong>CAD (Autodesk Inventor):</strong> Skilled in 3D modeling, simulation, and manufacturing-ready design.</p>
                         <p><strong>PCB Design (KiCad, OrCAD):</strong> Competent in schematic capture, PCB layout, simulation, and multi-layer board fabrication.</p>
                         <p><strong>LtSpice: </strong>Experienced in simulating analog and mixed-signal circuits, transient and frequency analysis, and verifying circuit behavior before prototyping</p>
-                        <p><strong>Ansys: </strong>Competent in CFD and FEA simulations, including thermal, structural, and fluid flow analysis using tools like Fluent and Mechanical.</p>
-                        <p><strong>MATLAB & Simulink: </strong> Strong command in system modeling, control systems, signal processing, and data analysis.</p>
+                        <p><strong>Mircowave Office AWR:</strong>Experienced in designing and simulating RF components, schematics and analysis using tools inside the environment</p>
+                        <p><strong>Ansys: </strong>Competent in CFD, and FEA simulations, including thermal, structural, and fluid flow analysis using tools like Fluent and Mechanical. Along with using HFSS to design and simulate various antenna arrays. </p>
+                        <p><strong>MATLAB & Simulink: </strong> Strong command in system modelling, control systems, signal processing, and data analysis.</p>
                         <p><strong>FPGA Design (Quartus Prime): </strong> Knowledgeable in VHDL/Verilog, synthesis, timing analysis, and embedded system development.</p>
                         <p><strong>UI/UX Design (Figma):</strong> Proficient in wireframing, prototyping, and collaborative design workflows.</p>
                     </div>
@@ -160,7 +165,7 @@
                         <div class="project-year">2025</div> <!-- Dont think i need again -->
                     </div>
                     <div class="project-content">
-                        <div class="project-title">Dog Breed Identification Machine Learning Project</div>
+                        <div class="project-title">Neural Spikes Analysis Machine Learning Project</div>
                     </div>
                 </div>
                 
@@ -212,25 +217,17 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <span class="close" onclick="closeModal('dogBreedModal')">&times;</span>
-                    <div class="modal-title">Dog Breed Identification Machine Learning Project</div>
+                    <div class="modal-title">Neural Spikes Analysis Machine Learning Project</div>
                 </div>
                 <div class="modal-body">
-                    <p>This project was a self-initiated exploration aimed at deepening my understanding of machine learning, particularly in the domain of computer vision. I developed a convolutional neural network (CNN) model capable of classifying dog breeds based on input images.</p>
+                    <p>This project was a self-initiated exploration aimed at deepening my understanding of machine learning, particularly in the domain of multi-layer perceptrons and unsupervised learning. I developed various ml models using various methods such as clustering, CNNs, and finally MLPs that were capable of filtering electronic noise, detect any spikes in the dataset and then classify those spikes based on what neurons caused them.</p>
                     
-                    <p>The goal was to accurately predict the breed of a dog from a given photograph. To achieve this, I utilized a comprehensive dataset from Kaggle containing over 20,000 labeled images spanning a wide variety of dog breeds.</p>
+                    <p>The goal was to accurately detect and classify the spikes according to the neuron class that it was caused by. To achieve this, I utilized comprehensive datasets, the first one being a labelled dataset with a low level of electronic noise. And the other datasets being unlabelled with greater levels of noise.</p>
                 
-                    <p>The workflow involved preprocessing the image data, building and training the model using TensorFlow and Keras, and visualizing the training process and results with tools such as pandas, numpy and matplotlib.</p>
+                    <p>The workflow involved filtering out the electronic noise using methods like bandpass filters or allowing the CNNs and MLPs to train on the noise to be able to distinguish between noise and actual data and then build the detection and classification models using SKlearn and Tensorflow and visualising the training process and results using libraries like numpy, matplotlib.</p>
                 
-                    <p>The project not only reinforced my understanding of neural networks and image classification but also gave me practical experience in handling large datasets, optimizing model performance, and evaluating classification metrics.</p>
+                    <p>The project not only reinforced my understanding of neural networks and data augmentation but also gave me practical experience in handling large datasets, optimising model performance, and evaluating classification metrics.</p>
                 
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">Keras</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">Matplotlib</span>
-                        <span class="tech-tag">Computer Vision</span>
-                    </div>
                     <div class="modal-footer">
                         <button class="close-button" onclick="closeModal('dogBreedModal')">Close</button>
                     </div>
@@ -246,7 +243,7 @@
                     <div class="modal-title">Arduino Based Smart Thermostat</div>
                 </div>
                 <div class="modal-body">
-                    <p>This was a group project that I led, focused on the end-to-end design and development of a smart thermostat. The primary objective was to apply and strengthen our skills in PCB design, embedded systems, and CAD for product development.</p>
+                    <p>This was a group project that I led, which focused on the end-to-end design and development of a smart thermostat. The primary objective was to apply and strengthen our skills in PCB design, embedded systems, and CAD for product development.</p>
 
                     <p>We began by conducting market research to analyze existing smart thermostats and identify key features and design trends among competitors. Based on our findings, we collaboratively developed an initial concept and system architecture.</p>
 
@@ -255,16 +252,6 @@
                     <p>In parallel, we designed a custom casing for the thermostat using CAD tools to simulate the final product assembly and ensure mechanical compatibility.</p>
 
                     <p>Leading this project significantly enhanced my leadership and project management skills, as well as my ability to collaborate effectively within a multidisciplinary team.</p>
-
-                    <div class="tech-stack">
-                        <span class="tech-tag">PCB Design</span>
-                        <span class="tech-tag">OrCAD</span>
-                        <span class="tech-tag">KiCad</span>
-                        <span class="tech-tag">Embedded Systems</span>
-                        <span class="tech-tag">CAD</span>
-                        <span class="tech-tag">Thermal Management</span>
-                        <span class="tech-tag">Signal Integrity</span>
-                    </div>
 
                     <div class="modal-footer">
                         <button class="close-button" onclick="closeModal('smartThermostatModal')">Close</button>
@@ -289,17 +276,6 @@
 
                     <p>Leading this project strengthened my skills in analog circuit design, embedded systems, and sensor integration. It also enhanced my ability to manage a multidisciplinary team and coordinate efforts across hardware and software development.</p>
 
-                    <div class="tech-stack">
-                        <span class="tech-tag">Arduino</span>
-                        <span class="tech-tag">Analog Circuit Design</span>
-                        <span class="tech-tag">Signal Processing</span>
-                        <span class="tech-tag">PWM Control</span>
-                        <span class="tech-tag">Embedded Systems</span>
-                        <span class="tech-tag">Sensor Integration</span>
-                        <span class="tech-tag">Motor Control</span>
-                        <span class="tech-tag">Battery Management</span>
-                    </div>
-
                     <div class="modal-footer">
                         <button class="close-button" onclick="closeModal('carRaceModal')">Close</button>
                     </div>
@@ -320,16 +296,6 @@
                     <p>To extend the functionality, we integrated facial recognition capabilities using the robot's camera feed. This allowed the system to detect and recognize faces in real time, enhancing its interactivity and autonomy.</p>
 
                     <p>Participating in this project strengthened my skills in MATLAB, especially in GUI development, real-time image processing, and understanding the fundamentals of facial recognition techniques.</p>
-
-                    <div class="tech-stack">
-                        <span class="tech-tag">MATLAB</span>
-                        <span class="tech-tag">GUI Development</span>
-                        <span class="tech-tag">Facial Recognition</span>
-                        <span class="tech-tag">Real-time Processing</span>
-                        <span class="tech-tag">Image Processing</span>
-                        <span class="tech-tag">Robotics</span>
-                        <span class="tech-tag">Computer Vision</span>
-                    </div>
 
                     <div class="modal-footer">
                         <button class="close-button" onclick="closeModal('beatrixModal')">Close</button>
@@ -354,16 +320,6 @@
 
                     <p>This project significantly enhanced my skills in circuit assembly, sensor integration, embedded programming, and physiological signal processing.</p>
 
-                    <div class="tech-stack">
-                        <span class="tech-tag">Arduino</span>
-                        <span class="tech-tag">PCB Assembly</span>
-                        <span class="tech-tag">Soldering</span>
-                        <span class="tech-tag">Photodiodes</span>
-                        <span class="tech-tag">Signal Processing</span>
-                        <span class="tech-tag">Embedded Programming</span>
-                        <span class="tech-tag">Sensor Integration</span>
-                        <span class="tech-tag">Biomedical Engineering</span>
-                    </div>
 
                     <div class="modal-footer">
                         <button class="close-button" onclick="closeModal('oximeterModal')">Close</button>
@@ -385,35 +341,35 @@
                 <div class="separator">
                     <h4>Team Bath Drones</h4>
                     <h5>
-                        <span>Joint Electrical Lead</span>
-                        <span class="date">August 2025 - Present</span>
+                        <span>Electrical Lead</span>
+                        <span class="date">September 2025 - Present</span>
                     </h5>
                     <p>
-                        As one of the Electrical Leads, I am responsible for the end-to-end design and development of the drone’s electrical systems in preparation for the IMechE UAS competition. My role includes leading the PCB and hardware design for both the drone and its remote controller. This position has strengthened my hardware engineering expertise while also developing my ability to communicate and collaborate effectively within a multidisciplinary team.
+                        Working as the Electrical Lead for Team Bath Drones has strengthened my leadership abilities and expanded my technical expertise beyond my core discipline. In this role, I am responsible for designing and simulating the drone’s automation system, developing the electronics for the payload release mechanism, and creating a remote controller enabling full manual control of the drone. <br>
+                       This experience allowed me to apply and deepen the technical knowledge gained through my degree while gaining hands-on exposure to various aspects of drone technology that I might not have otherwise encountered. It strengthened my hardware engineering expertise and enhanced my ability to communicate and collaborate effectively within a multidisciplinary team.
                     </p>
                 </div>
                 <div class="separator">
-                    <h4>Team Bath Drones</h4>
+                    <h4>Team Bath Prosthetics</h4>
                     <h5>
-                        <span>Avionics Engineer</span>
-                        <span class="date">Sep 2024 - July 2025</span>
+                        <span>Senior Sensor Engineer</span>
+                        <span class="date">September 2025 - Present</span>
                     </h5>
                     <p>
-                        As a member of Team Bath Drones, I am contributing to the design, development, and testing of drones for the IMechE UAS competition. My role involves assisting with drone assembly, optimizing performance to meet competition standards, and collaborating closely with teammates to address technical challenges. This experience has enhanced my skills in systems engineering, testing methodologies, problem solving and teamwork under tight deadlines. 
+                       As part of this Vertically Integrated Project (VIP) team, I have strengthened my expertise in evaluating and integrating various sensor technologies for use in prosthetic hands. My work focuses on identifying optimal sensors that can deliver meaningful sensory feedback, ultimately enhancing user confidence and device functionality. This involves conducting in-depth research, narrowing down suitable sensor options, and exploring effective methods for processing sensor inputs to deliver clear, intuitive outputs for end users. <br>
+                        This experience has allowed me to gain valuable practical experience with how multidisciplinary teams function in the real world and how engineers need to be able to communicate complex technical complex concepts to other disciplines using non technical language. 
                     </p>
                 </div>
-                <!--
                 <div class="separator">
-                    <h4>Team Bath Drones</h4>
+                    <h4>TheLabTutor</h4>
                     <h5>
-                        <span>Sponsorship Coordinator</span>
-                        <span class="date">Sep 2024 - July 2025</span>
+                        <span>Digital Designer</span>
+                        <span class="date">Sep 2025 - Oct 2025</span>
                     </h5>
                     <p>
-                        I successfully secured key sponsorships from industry leaders such as Ansys and RS Components, ensuring critical funding for this year’s competition. To achieve this, I designed a detailed sponsorship booklet that effectively communicated the team’s goals and vision, addressing potential ambiguities to align with sponsor’s expectations. My attention to detail in crafting clear, compelling messaging strengthen industry partnerships and secured essential financial support.
+                        I collaborated with a local tutoring business to design and build a fully functional, responsive website for them. I used tools such as Figma, to create wireframes and interactive prototypes until the client was satisfied and then implemented the final design using HTML, CSS and JavaScript.
                     </p>
                 </div>
-                -->
                 <div class="separator">
                     <h4>Cloudville Ltd</h4>
                     <h5>
@@ -422,16 +378,6 @@
                     </h5>
                     <p>
                         I worked in the IT department at Cloudville Ltd over the summer, successfully delivering a major IT project on time and within budget. I played a key role in testing and ensuring all website components functioned correctly, requiring problem solving and critical thinking to identify and resolve issues efficiently. This experience also strengthened my time management and communication skills through daily task completion.
-                    </p>
-                </div>
-                <div class="separator">
-                    <h4>Knowle Green Kickboxing Club</h4>
-                    <h5>
-                        <span>Assistant Kickboxing Trainer</span>
-                        <span class="date">July 2021 - Sep 2023</span>
-                    </h5>
-                    <p>
-                        I worked as an assistant kickboxing trainer after achieving my black belt where I coached children aged 4-8, ensuring they practiced various techniques safely. This role developed my communication and critical thinking skills, as I had to effectively explain techniques to the children and communicate progress and improvements to their parents.
                     </p>
                 </div>
             </div>
@@ -528,7 +474,7 @@
             <div class="separator">
                 <h4>Kickboxing Back Belt 1st Dan</h4>
                 <p>
-                    I have practiced kickboxing for approximately eight years, training up to five times a week. Throughout this time, I progressed through multiple gradings and successfully earned my black belt.<br><br>
+                    I have practiced kickboxing for approximately eight years, training up to five times a week. Throughout this time, I progressed through multiple gradings and successfully earned my black belt. This really helped me develop discipline and time management to balance training with school and sixth form work.<br><br>
                 </p>
             </div>
             
@@ -536,6 +482,12 @@
                 <h4>Various Cricket Teams</h4>
                 <p>
                     I have been actively involved in playing cricket for several years, both recreationally and in competitive settings. Through regular training and match experience, I’ve developed strong teamwork, strategic thinking, and leadership skills on and off the field.<br><br>
+                </p>
+            </div>
+            <div class="separator">
+                <h4>Kickboxing Assistant Coach</h4>
+                <p>
+                    I coached younger children aged 4-8 years old to learn various techiniques and to compete in competitions. This really helped me develop my communication and coaching skills.<br><br>
                 </p>
             </div>
         </div>
