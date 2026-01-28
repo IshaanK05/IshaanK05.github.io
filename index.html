@@ -159,7 +159,18 @@
             
             <div class="projects-grid">
                 
-            <!-- Dog Breed Identification Project -->
+                
+                <!-- RF Beamforming Project -->
+                <div class="project-tile" onclick="openModal('RFbeamformerModal')">
+                    <div class="project-image">
+                        <div class="project-year">2025</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">RF Beamforming Telemetry & Tracking System</div>
+                    </div>
+                </div>
+                
+                <!-- Neural Spikes Identification Project -->
                 <div class="project-tile" onclick="openModal('dogBreedModal')">
                     <div class="project-image">
                         <div class="project-year">2025</div> <!-- Dont think i need again -->
@@ -169,7 +180,7 @@
                     </div>
                 </div>
                 
-            <!-- Smart Thermostat Project -->
+                <!-- Smart Thermostat Project -->
                 <div class="project-tile" onclick="openModal('smartThermostatModal')">
                     <div class="project-image">
                         <div class="project-year">2024</div>
@@ -211,6 +222,32 @@
             <!-- ADD MORE PROJECTS HERE -->
             </div> 
         </section>
+        
+        
+        
+        
+        
+        <!--Pop up window for RF Beamfomrer project -->
+        <div id="RFbeamformerModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal('RFbeamformerModal')">&times;</span>
+                    <div class="modal-title">RF Beamforming Telemetry & Tracking System</div>
+                </div>
+                <div class="modal-body">
+                    <p>Designed and simulated an RF beamforming telemetry and tracking system for small drone platforms, with a focus on electronically steerable antenna arrays to enable directional tracking and robust telemetry links.</p>
+                    
+                    <p>Developed a multistage RF front-end and beamforming architecture, including the detailed design and analysis of patch antenna arrays, couplers, phase shifters, attenuators, and hybrid RF components, and evaluated their performance across the 2.4 GHz ISM band.</p>
+
+                    <p>Modelled and verified the complete RF system using circuit-level and electromagnetic simulation tools (AWR Microwave Office and HFSS), strengthening practical skills in RF system design, antenna theory, beamforming techniques, and high-frequency simulation workflows.</p>
+                    <div class="modal-footer">
+                        <button class="close-button" onclick="closeModal('RFbeamformerModal')">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
         
         <!-- Pop up window for Dog Breed project -->
         <div id="dogBreedModal" class="modal">
